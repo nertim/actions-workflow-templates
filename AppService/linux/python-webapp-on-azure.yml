@@ -27,7 +27,7 @@ jobs:
       run: zip -r myapp.zip .
     
     - name: 'Deploy to Azure Web App'
-    - uses: azure/webapps-deploy@v1
+      uses: azure/webapps-deploy@v1
       with: 
         app-name: '${web-app-name}'
         publish-profile: ${{ secrets.${azure-webapp-publish-profile-name} }}
